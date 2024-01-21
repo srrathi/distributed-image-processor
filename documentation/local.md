@@ -71,3 +71,5 @@ go run services/consumer/main.go
 This will start the services for the three endpoints and the image processing consumer, which will consume jobs pushed into the RabbitMQ queue.
 
 Now, the microservices are set up, and you can test them out. If you encounter any issues, ensure that you have the correct environment variables, have successfully connected to the database, and have the necessary dependencies installed.
+
+You can also refer [this Postman Collection](https://documenter.getpostman.com/view/14089377/2s9YymFPnz) for testing these services
