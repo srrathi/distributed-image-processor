@@ -50,6 +50,18 @@ go run services/consumer/main.go
 ## Testing Endpoints
 Use the provided [Postman Collection](https://documenter.getpostman.com/view/14089377/2s9YymFPnz) for testing the endpoints.
 
+## References
+- [Learn RabbitMQ for Event-Driven Architecture (EDA)](https://www.youtube.com/watch?v=1yC_bw0tWhQ&ab_channel=ProgrammingPercy)
+- [RabbitMQ and Golang](https://programmingpercy.tech/blog/event-driven-architecture-using-rabbitmq/)
+- [Go, RabbitMQ and gRPC Clean Architecture microservice](https://dev.to/aleksk1ng/go-rabbitmq-and-grpc-clean-architecture-microservice-2kdn)
+- https://dev.to/francescoxx/build-a-crud-rest-api-in-go-using-mux-postgres-docker-and-docker-compose-2a75
+- https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql
+- https://rohinivsenthil.medium.com/rabbitmq-in-golang-getting-started-34c65e6c7f92
+- https://medium.com/@ozdemir.zynl/rest-api-error-handling-in-go-behavioral-type-assertion-509d93636afd
+- https://dev.to/kittipat1413/a-guide-to-input-validation-in-go-with-validator-v10-56bp
+- https://www.sqlshack.com/getting-started-with-postgresql-on-docker/
+- https://chat.openai.com
+
 ## Issues and Contributions
 If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
 
