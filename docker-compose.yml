@@ -1,0 +1,68 @@
+version: "3"
+services:
+  jobStatus:
+    build:
+      context: .
+      dockerfile: ./services/jobStatus/Dockerfile
+    image: jobstatus
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  submitJob:
+    build:
+      context: .
+      dockerfile: ./services/submitJob/Dockerfile
+    image: submitjob
+    ports:
+      - "5003:5003"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  storeVisits:
+    build:
+      context: .
+      dockerfile: ./services/storeVisits/Dockerfile
+    image: storevisits
+    ports:
+      - "5002:5002"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  consumer:
+    build:
+      context: .
+      dockerfile: ./services/consumer/Dockerfile
+    image: consumer
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 12345678
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    env_file:
+      - .env
+    ports:
+      - "5672:5672"
+      - "15672:15672"
